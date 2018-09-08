@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace Grades
 {
@@ -7,6 +8,27 @@ namespace Grades
         public GradeBook()
         {
             grades = new List<float>();
+        }
+        public GradeStatistics ComputeStatistics() // So, ComputeStatistics is returning a type GradeStatistics.
+        {
+            GradeStatistics stats = new GradeStatistics();
+            float sum = 0;
+            // As part
+            
+            foreach (float grade in grades)
+            {
+                sum += grade; // Add each grade value to sum.
+
+                // Highest grade.  For each iteration, check if the current grade value is greater then stats.HighestGrade
+                stats.HighestGrade  = Math.Max(stats.HighestGrade, grade);
+                stats.LowestGrade   = Math.Min(stats.LowestGrade, grade);
+
+            }
+               
+            stats.AverageGrade      = sum / grades.Count; // Once outside of the grades iteration, set the average grade property.
+
+            return stats;
+
         }
         public void AddGrade(float grade)
         {
