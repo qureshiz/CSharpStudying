@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Grades
 {
@@ -11,8 +12,8 @@ namespace Grades
         }
         public GradeStatistics ComputeStatistics() // So, ComputeStatistics is returning a type GradeStatistics.
         {
-            GradeStatistics stats = new GradeStatistics();
-            float sum = 0;
+            GradeStatistics stats   = new GradeStatistics();
+            float sum               = 0;
             // As part
             
             foreach (float grade in grades)
@@ -20,12 +21,19 @@ namespace Grades
                 sum += grade; // Add each grade value to sum.
 
                 // Highest grade.  For each iteration, check if the current grade value is greater then stats.HighestGrade
-                stats.HighestGrade  = Math.Max(stats.HighestGrade, grade);
-                stats.LowestGrade   = Math.Min(stats.LowestGrade, grade);
+                //stats.HighestGrade  = Math.Max(stats.HighestGrade, grade);
+                //stats.LowestGrade   = Math.Min(stats.LowestGrade, grade);
 
             }
-               
-            stats.AverageGrade      = sum / grades.Count; // Once outside of the grades iteration, set the average grade property.
+
+            //  Comment below out and use linq (below) to get the average grade.  
+            //stats.AverageGrade      = sum / grades.Count; // Once outside of the grades iteration, set the average grade property.
+            // Calculate the average, highest and lowest grade using linq. 
+            
+            // Use linq to get the average grade
+            stats.AverageGrade  = grades.Average();
+            stats.HighestGrade  = grades.Max();
+            stats.LowestGrade   = grades.Min();
 
             return stats;
 
