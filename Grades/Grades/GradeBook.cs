@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System;
 using System.Linq;
 
 namespace Grades
 {
-    class GradeBook
+    public class GradeBook
     {
         public GradeBook()
         {
@@ -32,7 +31,7 @@ namespace Grades
             
             // Use linq to get the average grade
             stats.AverageGrade  = grades.Average();
-            stats.HighestGrade  = grades.Max();
+            stats.HighestGrade = grades.Max();
             stats.LowestGrade   = grades.Min();
 
             return stats;

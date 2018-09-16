@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csproj", "{A6D6CF31-FF1C-4829-9CB9-5B7D46084489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades.Tests", "Grades.Tests\Grades.Tests.csproj", "{CF343DB9-1A45-405C-AAFF-3ADAAAF3971D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{A6D6CF31-FF1C-4829-9CB9-5B7D46084489}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6D6CF31-FF1C-4829-9CB9-5B7D46084489}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6D6CF31-FF1C-4829-9CB9-5B7D46084489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF343DB9-1A45-405C-AAFF-3ADAAAF3971D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF343DB9-1A45-405C-AAFF-3ADAAAF3971D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF343DB9-1A45-405C-AAFF-3ADAAAF3971D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF343DB9-1A45-405C-AAFF-3ADAAAF3971D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ECB3E9A-8FBA-449A-987A-001399DAA5CD}
 	EndGlobalSection
 EndGlobal
