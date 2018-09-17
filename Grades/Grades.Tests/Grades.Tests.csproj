@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GradeBookTests.cs" />
+    <Compile Include="Types\ReferenceTypeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
