@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System;
+using System.Linq;
 
 namespace Utilities
 {
@@ -7,7 +9,14 @@ namespace Utilities
         static void Main()
         {
 
-            string text = File.ReadAllText("c:\BreachedIncidents.txt");
+            string[] lines = File.ReadAllLines(@"c:\temp\BreachedIncidents.txt");
+
+            foreach (string s in lines)
+            {
+                System.Console.WriteLine(s);
+            }
+            
         }
+
     }
 }
